@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="/javascripts/script.js"></script>
+</head>
+<body>
+    <div class="w-full text-white min-h-screen bg-[#212121] p-5 flex flex-col gap-4 text-[#ececec]">
+        <form action="/create" method="post">
+        <div class="main w-full flex flex-col gap-4">
+                <input  class="block px-5 py-2 bg-[#303030] rounded-md outline-none  w-full" type="text" placeholder="Enter title" name="title"></input>
+                <textarea class="block px-5 py-2 bg-[#303030] w-full rounded-md outline-none resize-none" placeholder="Enter Description" name="description" ></textarea>
+                <input class="w-fit bg-blue-400 px-5 py-2 rounded-md" type="submit"  value="Create Task"></input>
+            </div>  
+        </form>
+
+        <div class="tasks flex gap-3 flex-wrap">
+            <% if(files.length==0){ %>
+                <h3 class="text-zinc-600 ">No tasks yet</h3>
+            <% }else{ %>
+              <%  files.forEach((file)=>{ %>
+                    <div class="card px-5 py-2 bg-[#424242] flex flex-col shadow-md rounded-lg min-w-72">
+                        <h1 class="tetx-2xl"><%= file%></h1>
+                        <a class="text-[#4e8bdc] ml-auto" target="_blank" href="/file/<%=file%>">Read More</a>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+
+
