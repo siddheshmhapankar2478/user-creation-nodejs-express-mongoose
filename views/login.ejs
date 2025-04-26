@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p class="title">Login Page</p>
+
+      <form action="/create" method="post" class="formContainer">
+        <div class="formElement">
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="Enter Name" required />
+        </div>
+
+        <div class="formElement">
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Enter Email" required />
+        </div>
+
+        <div class="formElement">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+        </div>
+
+        <div class="formElement">
+          <label for="phone">Phone</label>
+          <input type="tel" name="phone" placeholder="Enter Phone" />
+        </div>
+
+        <div class="formElement">
+          <label for="age">Age</label>
+          <input type="number" name="age" placeholder="Enter Age" />
+        </div>
+
+        <input type="submit" value="Create Account" class="submitBtn" />
+      </form>
+    </div>
+  </body>
+</html>

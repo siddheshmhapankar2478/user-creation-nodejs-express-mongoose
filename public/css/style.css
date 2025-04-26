@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formElement {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+input {
+  padding: 6px 12px;
+}
+
+.submitBtn {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+}
